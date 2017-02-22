@@ -22,14 +22,9 @@
 #     get "/gibberish here"
 #     refute last_response.ok?
 #     assert_equal 404, last_response.status
-#     assert_equal "dingus. 404.", last_response.body
+#     assert_equal "ya blew it.", last_response.body
 #   end
 #
-#   def test_a_post
-#     post "/poster", 'field1' => "Hey", 'field2' => "i don't say ya'll"
-#     p last_resquest
-#     assert last_response.ok?
-#     assert_equal "Hey i don't say ya'll"
-#   end
+
 #
 # end

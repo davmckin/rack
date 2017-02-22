@@ -12,13 +12,13 @@ def initialize(env)
 
 
 def response
-  if @path == "/lipsums"
+  if @path.starts_with "/lipsums"
     "Would you like to read kotor lotr or hodor?"
-  elsif @path == "kotor"
+  elsif @path.starts_with "/kotor"
     kotor_output
-  elsif @path == "lotr"
+  elsif @path.starts_with "/lotr"
     lotr_output
-  elsif @path == "hodor"
+  elsif @path.starts_with "/hodor"
     hodor_output
   else
     four_oh_four
