@@ -1,5 +1,4 @@
 require 'rack'
-require_relative 'app'
 
 
 app = Proc.new do |env|
@@ -7,9 +6,12 @@ app = Proc.new do |env|
   num = env["REQUEST_PATH"].sub(/\/\w+[|\/]/, "")
   num = 1 if num.to_i.zero?
 
-  # Replace the code below with your code (and remove this comment)
-  ['200', {'Content-Type' => 'text/html'}, [env.inspect]]
+  headers = {'Content-Type' => 'text/html'}
+
+
+
+  # ['200', {'Content-Type' => 'text/html'}, [num.inspect]]
 
 end
-app = App 
+
 Rack::Handler::WEBrick.run app
